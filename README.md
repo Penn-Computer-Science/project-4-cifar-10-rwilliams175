@@ -80,6 +80,8 @@ Be sure to include the following in your submission - Push to GitHub with a comm
 | **Reflection** | **20** | Clear written discussion of differences between MNIST and CIFAR-10, performance observations, and ideas for improvement. |
 | **Total** | **100** | — |
 
+## Student Reflection
+ - 
 
 
 

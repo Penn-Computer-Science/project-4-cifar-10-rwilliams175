@@ -58,7 +58,7 @@ model = tf.keras.models.Sequential(
         tf.keras.layers.Conv2D(64, (3,3), padding = 'same', activation = 'relu', input_shape = input_shape),
         tf.keras.layers.Flatten(),
         tf.keras.layers.Dense(128, activation = 'relu'),
-        tf.keras.layers.Dropout(0.35),
+        tf.keras.layers.Dropout(0.4),
         tf.keras.layers.Dense(num_classes, activation = 'softmax')
     ]
 )
