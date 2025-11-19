@@ -7,16 +7,16 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import random
 import keras
-from keras.datasets import cifar10
+from keras.datasets import cifar100
 from keras.utils import to_categorical
 #print out versions of libaries
 print("Tensorflow: ", tf.__version__ , " Seaborn:" , sns.__version__)
 
 #load the data set
-cifar10 = tf.keras.datasets.cifar10
+cifar100 = tf.keras.datasets.cifar100
 #create the training and testing data frames
 #(training images, training labels), (testing images, testing labels)
-(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+(x_train, y_train), (x_test, y_test) = cifar100.load_data()
 #show the number of examples in each labeled set
 
 #sns.countplot(x=y_train)
@@ -37,16 +37,16 @@ x_train = x_train/255.0 #normalize the data to be between 0 and 1
 x_test = x_test.astype('float32')
 x_test = x_test/255.0 #normalize the data to be between 0 and 1
 #convert our labels to be one-hot, not sparce
-y_train = to_categorical(y_train, 10)
-y_test = to_categorical(y_test, 10)
+y_train = to_categorical(y_train, 100)
+y_test = to_categorical(y_test, 100)
 #show an example image from MNIST
-plt.imshow(x_train[random.randint(0,59999)][:,:,0])
+plt.imshow(x_train[random.randint(0,49999)][:,:,0])
 plt.show()
 
 
 batch_size = 128
-num_classes = 10
-epochs = 5
+num_classes = 100
+epochs = 10
 
 #build model
 model = tf.keras.models.Sequential(

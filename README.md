@@ -81,7 +81,9 @@ Be sure to include the following in your submission - Push to GitHub with a comm
 | **Total** | **100** | — |
 
 ## Student Reflection
- - 
+ - The main differences I noticed from the MNIST model and the CIFAR-10 model is the amount of loss in the CIFAR-10 model. There was a much lower accuracy and loss in the CIFAR-10 model compared to MNIST. MNIST was nearing 95%-99% on both training and validation data while CIFAR-10 was only able to get both to nearly 70%.
+ - Firstly, I had to add more layers. There was no way to adjust the layers that I already had without adjusting any of them that would give me the accuracy and loss I was going for. The biggest help I noticed was adding those layers, and then adding a Dropoff layer after all Conv2D layers. This ensured that I was able to reach those higher accuracies without overfitting the model entirely.
+ - If I had more time, I would continue to add more layers, and maybe add more specific parameters to the layers already added. I would honestly just continue to add layers and troubleshoot what was overfitting it and what was making it more accurate.
 
 
 
